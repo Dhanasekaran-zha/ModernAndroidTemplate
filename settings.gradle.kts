@@ -24,3 +24,12 @@ dependencyResolutionManagement {
 
 rootProject.name = "ModernAndroidTemplate"
 include(":app")
+include(":domain")
+include(":data")
+include(":feature:auth")
+include(":feature:employees")
+include(":feature:clients")
+include(":core:ui")
+include(":core:network")
+include(":core:database")
+include(":core:datastore")
