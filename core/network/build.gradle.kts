@@ -36,12 +36,11 @@ android {
 }
 
 dependencies {
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
     implementation(libs.retrofit.core)
     implementation(libs.retrofit.kotlin.serialization)
     implementation(libs.okhttp.logging)
     implementation(libs.kotlinx.serialization.json)
+    implementation(project(":core:datastore"))
 }
