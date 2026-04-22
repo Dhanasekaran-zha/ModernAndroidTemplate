@@ -46,7 +46,7 @@ object NetworkModule {
     @Singleton
     fun provideRetrofit(okHttpClient: OkHttpClient, json: Json): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://api.example.com/") // Replace with your actual base URL
+            .baseUrl("https://vascoda-be.onrender.com/api/") // Replace with your actual base URL
             .client(okHttpClient)
             .addConverterFactory(json.asConverterFactory("application/json".toMediaType()))
             .build()
