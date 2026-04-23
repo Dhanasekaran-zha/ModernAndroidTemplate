@@ -10,40 +10,40 @@ import kotlinx.serialization.SerialName
 data class LoginResponse(
 
     @SerialName("code")
-    val code: Int? = null,
+    val code: Int,
 
     @SerialName("message")
-    val message: String? = null,
+    val message: String,
 
-    @SerialName("loginData")
-    val loginData: LoginData? = null,
+    @SerialName("data")
+    val loginData: LoginData,
 
     @SerialName("status")
-    val status: String? = null
+    val status: String
 )
 
 @Serializable
 data class LoginData(
 
     @SerialName("accessToken")
-    val accessToken: String? = null,
+    val accessToken: String,
 
     @SerialName("user")
-    val user: User? = null
+    val user: User
 )
 
 @Serializable
 data class User(
 
     @SerialName("role")
-    val role: String? = null,
+    val role: String,
 
     @SerialName("id")
-    val id: String? = null,
+    val id: String,
 
     @SerialName("email")
-    val email: String? = null,
+    val email: String,
 
     @SerialName("username")
-    val username: String? = null
+    val username: String
 )

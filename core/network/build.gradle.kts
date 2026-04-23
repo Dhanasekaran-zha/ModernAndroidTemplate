@@ -43,4 +43,5 @@ dependencies {
     implementation(libs.okhttp.logging)
     implementation(libs.kotlinx.serialization.json)
     implementation(project(":core:datastore"))
+    implementation(project(":core:utils"))
 }

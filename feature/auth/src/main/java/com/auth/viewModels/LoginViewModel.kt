@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.auth.ui.login.LoginUiState
 import com.domain.usecase.LoginUseCase
+import com.utils.network.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -21,17 +22,22 @@ class LoginViewModel @Inject constructor(
 
     fun login(email: String, pass: String) {
         viewModelScope.launch {
-            _uiState.value = LoginUiState.Loading
-            val result = loginUseCase(email, pass)
+            // 1. Call the UseCase which now returns a Flow
+            loginUseCase(email, pass).collect { resource ->
 
-            result.fold(
-                onSuccess = { authResult ->
-                    _uiState.value = LoginUiState.Success("Welcome back, ${authResult.userEmail}")
-                },
-                onFailure = { error ->
-                    _uiState.value = LoginUiState.Error(error.message ?: "Unknown Error")
+                // 2. Map the emitted Resource states to your UI State
+                _uiState.value = when (resource) {
+                    is Resource.Loading -> {
+                        LoginUiState.Loading
+                    }
+                    is Resource.Success -> {
+                        LoginUiState.Success("Logged in as ${resource.data.userEmail}")
+                    }
+                    is Resource.Error -> {
+                        LoginUiState.Error(resource.message)
+                    }
                 }
-            )
+            }
         }
     }
 }
