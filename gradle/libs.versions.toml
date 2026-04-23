@@ -29,6 +29,7 @@ turbine = "1.2.1"
 coreSplashscreen = "1.0.1"
 
 [libraries]
+androidx-compose-material-icons-extended = { module = "androidx.compose.material:material-icons-extended" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 javax-inject = { module = "javax.inject:javax.inject", version.ref = "javaxInject" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -81,5 +82,6 @@ compose = [
     "androidx-compose-ui-tooling",
     "androidx-compose-ui-tooling-preview",
     "androidx-compose-material3",
-    "androidx-compose-ui"
+    "androidx-compose-ui",
+    "androidx-compose-material-icons-extended"
 ]

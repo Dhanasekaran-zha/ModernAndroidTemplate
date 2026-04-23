@@ -9,8 +9,8 @@ import androidx.compose.ui.Modifier
 
 
 @Composable
-fun DummyEmployeeScreen() {
+fun DummyEmployeeScreen(name :String) {
     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-        Text(text = "Dummy Employee Screen - Success!")
+        Text(text = name)
     }
 }

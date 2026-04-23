@@ -5,5 +5,6 @@ sealed class Screen(val route: String) {
     data object MainGraph : Screen("main_graph")
     data object Login : Screen("login")
     data object EmployeeDummy : Screen("employee_dummy")
-    data object Splash : Screen("splash")
+    data object Clients : Screen("clients")
+    data object User : Screen("user")
 }

@@ -32,7 +32,7 @@ class MainActivity : ComponentActivity() {
 
                 if (!viewModel.isLoading.collectAsState().value) {
                     val navController = rememberNavController()
-                    val startRoute = if (isAuthenticated) Screen.EmployeeDummy else Screen.Login
+                    val startRoute = if (isAuthenticated) Screen.MainGraph else Screen.Login
 
                     RootNavGraph(
                         navController = navController,
