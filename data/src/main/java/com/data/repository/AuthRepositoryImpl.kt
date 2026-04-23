@@ -8,6 +8,7 @@ import com.domain.repository.AuthRepository
 import com.network.utils.safeApiCall
 import com.utils.network.Resource
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
@@ -39,5 +40,9 @@ class AuthRepositoryImpl @Inject constructor(
             is Resource.Error -> emit(Resource.Error(result.message))
             else -> Unit
         }
+    }
+
+    override suspend fun isAuthenticated(): Boolean {
+        return tokenManager.authToken.first() != null
     }
 }

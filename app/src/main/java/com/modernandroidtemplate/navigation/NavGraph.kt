@@ -9,10 +9,10 @@ import com.ui.navigation.Screen
 
 
 @Composable
-fun RootNavGraph(navController: NavHostController) {
+fun RootNavGraph(navController: NavHostController, startDestination: Screen) {
     NavHost(
         navController = navController,
-        startDestination = Screen.Login.route
+        startDestination = startDestination.route
     ) {
         authGraph(
             onLoginSuccess = {

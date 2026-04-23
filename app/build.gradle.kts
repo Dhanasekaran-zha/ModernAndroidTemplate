@@ -52,8 +52,10 @@ dependencies {
     implementation(libs.androidx.navigation.compose)
     ksp(libs.hilt.compiler)
     implementation(project(":data"))
+    implementation(project(":domain"))
     implementation(project(":core:ui"))
     implementation(project(":feature:auth"))
     implementation(project(":feature:employees"))
     implementation(project(":feature:clients"))
+    implementation(libs.androidx.core.splashscreen)
 }
