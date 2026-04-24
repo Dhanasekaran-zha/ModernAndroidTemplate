@@ -1,8 +1,8 @@
 package com.domain.model
 
 data class Employee(
-    val id: Int,
+    val id: String,
     val fullName: String,
-    val email: String,
+    val phone: String,
     val position: String
 )
