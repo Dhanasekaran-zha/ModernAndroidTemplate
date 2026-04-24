@@ -14,10 +14,10 @@ import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.employees.navigation.clientGraph
+import com.clients.navigation.clientGraph
 import com.employees.navigation.employeeGraph
-import com.employees.navigation.userGraph
 import com.modernandroidtemplate.navigation.BottomNavItem
+import com.profile.navigation.profileGraph
 import com.ui.navigation.Screen
 
 @Composable
@@ -63,7 +63,7 @@ fun MainScreen() {
             ) {
                 employeeGraph()
                 clientGraph()   // From :feature:clients
-                userGraph()     // From :feature:user (to be created)
+                profileGraph()     // From :feature:user (to be created)
             }
         }
     }

@@ -22,6 +22,7 @@
             <option value="$PROJECT_DIR$/feature/auth" />
             <option value="$PROJECT_DIR$/feature/clients" />
             <option value="$PROJECT_DIR$/feature/employees" />
+            <option value="$PROJECT_DIR$/feature/profile" />
           </set>
         </option>
       </GradleProjectSettings>

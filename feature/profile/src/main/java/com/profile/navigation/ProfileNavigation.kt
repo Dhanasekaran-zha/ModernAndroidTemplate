@@ -1,15 +1,16 @@
-package com.employees.navigation
+package com.profile.navigation
 
 
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
-import com.employees.ui.DummyEmployeeScreen
+import com.profile.ui.ProfileScreen
 import com.ui.navigation.Screen
 
-fun NavGraphBuilder.employeeGraph() {
-    composable(route = Screen.EmployeeDummy.route) {
+
+fun NavGraphBuilder.profileGraph() {
+    composable(route = Screen.User.route) {
         // For now, this can just be the dummy screen or the actual EmployeeScreen
-        DummyEmployeeScreen(name = "Employee")
+        ProfileScreen(name = "User")
     }
 }
 
